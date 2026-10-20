@@ -2,122 +2,277 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>ERPHUN | Developer & Technology Enthusiast</title>
+    <title>ERPHUN — Programmer and Game Developer</title>
 
-    <meta name="description" content="ERPHUN is an independent technology enthusiast interested in programming, artificial intelligence, game development with Unity, and cybersecurity.">
+    <meta name="description"
+          content="ERPHUN is an online alias for a programming enthusiast and independent game developer. This profile documents programming interests, a 3D third-person game project developed with Unity, and the CS50's Introduction to Artificial Intelligence with Python certificate offered through HarvardX.">
 
     <meta name="author" content="ERPHUN">
     <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#f8fafc">
+
+    <link rel="canonical"
+          href="https://e7884494-arch.github.io/">
+
+    <meta property="og:type" content="profile">
+    <meta property="og:title"
+          content="ERPHUN — Programmer and Game Developer">
+    <meta property="og:description"
+          content="The official public profile of ERPHUN, featuring programming, Unity game development, and artificial intelligence studies.">
+    <meta property="og:url"
+          content="https://e7884494-arch.github.io/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title"
+          content="ERPHUN — Programmer and Game Developer">
+    <meta name="twitter:description"
+          content="Programming, game development with Unity, and artificial intelligence learning.">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfilePage",
+      "name": "ERPHUN — Official Profile",
+      "url": "https://e7884494-arch.github.io/",
+      "description": "The public technology profile of ERPHUN, an online alias associated with programming, independent game development, and artificial intelligence studies.",
+      "mainEntity": {
+        "@type": "Person",
+        "@id": "https://e7884494-arch.github.io/#erphun",
+        "name": "ERPHUN",
+        "url": "https://e7884494-arch.github.io/",
+        "description": "ERPHUN is an online alias for a programming enthusiast and independent game developer interested in software development, Unity, and artificial intelligence.",
+        "knowsAbout": [
+          "Programming",
+          "Software Development",
+          "Python",
+          "Artificial Intelligence",
+          "Game Development",
+          "Unity",
+          "3D Game Development"
+        ],
+        "hasCredential": {
+          "@type": "EducationalOccupationalCredential",
+          "name": "CS50's Introduction to Artificial Intelligence with Python",
+          "credentialCategory": "Course completion certificate",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "HarvardX",
+            "parentOrganization": {
+              "@type": "CollegeOrUniversity",
+              "name": "Harvard University"
+            }
+          },
+          "url": "https://cs50.harvard.edu/ai/"
+        }
+      }
+    }
+    </script>
 
     <style>
+        :root {
+            color-scheme: light;
+            --background: #f8fafc;
+            --surface: #ffffff;
+            --text: #172033;
+            --muted: #5b6475;
+            --accent: #315efb;
+            --border: #e2e8f0;
+        }
+
         * {
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             margin: 0;
-            background: #f5f7fa;
-            color: #202938;
+            background: var(--background);
+            color: var(--text);
             font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.8;
+            line-height: 1.75;
+        }
+
+        a {
+            color: var(--accent);
+            overflow-wrap: anywhere;
+        }
+
+        .container {
+            width: min(100% - 40px, 960px);
+            margin-inline: auto;
         }
 
         header {
-            background: #ffffff;
-            border-bottom: 1px solid #e5e7eb;
-            padding: 22px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
         }
 
-        .logo {
-            font-size: 27px;
-            font-weight: bold;
+        .navigation {
+            min-height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .brand {
+            font-size: 25px;
+            font-weight: 800;
             letter-spacing: 2px;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
         }
 
         nav a {
-            color: #374151;
+            color: var(--muted);
+            font-size: 14px;
             text-decoration: none;
-            margin-left: 20px;
+        }
+
+        nav a:hover {
+            color: var(--accent);
         }
 
         .hero {
-            padding: 90px 8%;
-            background: #ffffff;
+            padding: 90px 0 75px;
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
         }
 
-        .tag {
-            color: #2563eb;
-            font-weight: bold;
+        .eyebrow {
+            color: var(--accent);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
 
         h1 {
+            max-width: 760px;
+            margin: 15px 0;
             font-size: clamp(40px, 8vw, 68px);
-            margin: 10px 0;
-            line-height: 1.2;
+            line-height: 1.12;
+            letter-spacing: -2px;
         }
 
-        .hero p {
-            max-width: 650px;
-            color: #5b6472;
+        .intro {
+            max-width: 720px;
+            color: var(--muted);
             font-size: 18px;
         }
 
         .button {
             display: inline-block;
-            background: #2563eb;
-            color: white;
-            padding: 12px 24px;
+            margin-top: 18px;
+            padding: 11px 21px;
             border-radius: 8px;
+            background: var(--accent);
+            color: white;
+            font-weight: 700;
             text-decoration: none;
-            margin-top: 15px;
         }
 
         section {
-            padding: 55px 8%;
+            padding: 58px 0;
+            border-bottom: 1px solid var(--border);
         }
 
         h2 {
+            margin: 0 0 16px;
             font-size: 30px;
-            margin-bottom: 15px;
+            letter-spacing: -0.5px;
         }
 
-        .cards {
+        h3 {
+            margin-top: 0;
+            font-size: 20px;
+        }
+
+        p {
+            margin-top: 0;
+        }
+
+        .muted {
+            color: var(--muted);
+        }
+
+        .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 18px;
             margin-top: 25px;
         }
 
         .card {
-            background: white;
-            padding: 24px;
-            border: 1px solid #e5e7eb;
+            padding: 25px;
+            background: var(--surface);
+            border: 1px solid var(--border);
             border-radius: 12px;
         }
 
-        .card h3 {
-            margin-top: 0;
+        .card p:last-child {
+            margin-bottom: 0;
         }
 
-        .muted {
-            color: #5b6472;
+        .label {
+            display: inline-block;
+            margin-bottom: 12px;
+            color: var(--accent);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .certificate-title {
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 1.5;
         }
 
         footer {
-            padding: 25px 8%;
-            background: #ffffff;
-            border-top: 1px solid #e5e7eb;
-            color: #5b6472;
-            text-align: center;
+            padding: 30px 0;
+            color: var(--muted);
+            font-size: 14px;
         }
 
-        a {
-            overflow-wrap: anywhere;
+        @media (max-width: 620px) {
+            .container {
+                width: min(100% - 30px, 960px);
+            }
+
+            .navigation {
+                align-items: flex-start;
+                flex-direction: column;
+                padding: 18px 0;
+            }
+
+            nav {
+                gap: 14px;
+            }
+
+            .hero {
+                padding: 65px 0 55px;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                letter-spacing: -1px;
+            }
         }
     </style>
 </head>
@@ -125,92 +280,206 @@
 <body>
 
 <header>
-    <div class="logo">ERPHUN</div>
+    <div class="container navigation">
+        <a class="brand" href="#home" aria-label="ERPHUN home">
+            ERPHUN
+        </a>
 
-    <nav>
-        <a href="#about">About</a>
-        <a href="#interests">Interests</a>
-    </nav>
+        <nav aria-label="Main navigation">
+            <a href="#about">About</a>
+            <a href="#programming">Programming</a>
+            <a href="#game-development">Game Development</a>
+            <a href="#certificate">Certificate</a>
+        </nav>
+    </div>
 </header>
 
 <main>
-    <section class="hero">
-        <span class="tag">PERSONAL TECHNOLOGY PROFILE</span>
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="eyebrow">Official Public Profile</div>
 
-        <h1>Hello, I'm ERPHUN.</h1>
+            <h1>ERPHUN</h1>
 
-        <p>
-            An independent technology enthusiast interested in programming,
-            artificial intelligence, game development, and cybersecurity.
-            This website introduces my interests and learning journey.
-        </p>
+            <p class="intro">
+                Programming enthusiast, independent game developer,
+                and learner in artificial intelligence.
+                This website is the public profile of ERPHUN and
+                documents selected technology interests, a personal
+                game development project, and an AI course certificate.
+            </p>
 
-        <a class="button" href="#about">Learn More</a>
+            <a class="button" href="#about">Explore Profile</a>
+        </div>
     </section>
 
     <section id="about">
-        <h2>About ERPHUN</h2>
+        <div class="container">
+            <h2>About ERPHUN</h2>
 
-        <p class="muted">
-            ERPHUN is an online alias used for technology-related
-            learning and creative projects. This page is a personal
-            profile documenting interests in software, digital
-            technology, and game development.
-        </p>
+            <p class="muted">
+                ERPHUN is an online alias used for programming,
+                software development, and technology-related projects.
+                This profile focuses on programming, interactive
+                software, 3D game development, and learning about
+                artificial intelligence.
+            </p>
+
+            <p class="muted">
+                The purpose of this page is to provide a consistent,
+                public reference for the ERPHUN alias and its
+                documented technology interests.
+            </p>
+        </div>
     </section>
 
-    <section id="interests">
-        <h2>Interests & Learning</h2>
+    <section id="programming">
+        <div class="container">
+            <h2>Programming and Software Development</h2>
 
-        <div class="cards">
+            <p class="muted">
+                ERPHUN is interested in programming concepts,
+                software development, writing code, and building
+                interactive applications.
+            </p>
+
+            <div class="grid">
+                <article class="card">
+                    <span class="label">Interest</span>
+                    <h3>Programming</h3>
+                    <p class="muted">
+                        Learning programming fundamentals,
+                        problem-solving, and software design.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <span class="label">Interest</span>
+                    <h3>Artificial Intelligence</h3>
+                    <p class="muted">
+                        Studying artificial intelligence concepts
+                        and exploring how intelligent software
+                        systems work.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="game-development">
+        <div class="container">
+            <h2>3D Game Development</h2>
+
             <article class="card">
-                <h3>Programming</h3>
+                <span class="label">Personal Project</span>
+                <h3>Third-Person 3D Game Built with Unity</h3>
+
                 <p class="muted">
-                    Learning programming concepts and building
-                    software projects.
+                    ERPHUN has worked on an independent third-person
+                    3D game project using the Unity game engine.
+                    The project involves developing an interactive
+                    3D game experience and implementing gameplay
+                    features with programming.
                 </p>
-            </article>
 
-            <article class="card">
-                <h3>Artificial Intelligence</h3>
                 <p class="muted">
-                    Exploring AI systems, how they work,
-                    and how they can be used responsibly.
-                </p>
-            </article>
-
-            <article class="card">
-                <h3>Game Development</h3>
-                <p class="muted">
-                    Interested in creating 3D games and interactive
-                    experiences using Unity.
-                </p>
-            </article>
-
-            <article class="card">
-                <h3>Cybersecurity</h3>
-                <p class="muted">
-                    Learning about web security, vulnerabilities,
-                    and defensive security practices.
+                    The project demonstrates practical interest
+                    in game development, real-time 3D environments,
+                    and interactive software.
                 </p>
             </article>
         </div>
     </section>
 
-    <section>
-        <h2>Purpose</h2>
+    <section id="certificate">
+        <div class="container">
+            <h2>Artificial Intelligence Course Certificate</h2>
 
-        <p class="muted">
-            This website serves as the public profile of ERPHUN.
-            Its purpose is to share selected interests, learning
-            topics, and technology-related activities.
-        </p>
+            <article class="card">
+                <span class="label">Course Certificate</span>
+
+                <p class="certificate-title">
+                    CS50's Introduction to Artificial Intelligence
+                    with Python
+                </p>
+
+                <p class="muted">
+                    This course is offered through HarvardX,
+                    Harvard University's online learning initiative.
+                    It covers introductory concepts in artificial
+                    intelligence and their implementation using Python.
+                </p>
+
+                <p>
+                    <strong>Course provider:</strong>
+                    HarvardX
+                </p>
+
+                <p>
+                    <strong>University:</strong>
+                    Harvard University
+                </p>
+
+                <p>
+                    <strong>Subject:</strong>
+                    Artificial Intelligence and Python
+                </p>
+
+                <p>
+                    <strong>Credential type:</strong>
+                    Course completion certificate
+                </p>
+
+                <p>
+                    Official course information:
+                    <a href="https://cs50.harvard.edu/ai/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        CS50's Introduction to Artificial Intelligence
+                        with Python
+                    </a>
+                </p>
+
+                <p class="muted">
+                    The certificate holder's legal name is not
+                    displayed on this public profile.
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <section id="identity">
+        <div class="container">
+            <h2>About This Website</h2>
+
+            <p class="muted">
+                Website name: ERPHUN.
+                Profile type: Personal technology profile.
+                Main topics: Programming, software development,
+                Unity game development, and artificial intelligence.
+            </p>
+
+            <p class="muted">
+                This page describes the ERPHUN alias and the interests
+                and activities documented here. It does not claim
+                that ERPHUN is a registered company or an official
+                representative of Harvard University.
+            </p>
+        </div>
     </section>
 </main>
 
 <footer>
-    <p>ERPHUN — Personal Technology Profile</p>
+    <div class="container">
+        <p>
+            ERPHUN — Personal Programming and Game Development Profile
+        </p>
+
+        <p>
+            This website is an independently maintained personal profile.
+        </p>
+    </div>
 </footer>
 
 </body>
-  </html>
+</html>
